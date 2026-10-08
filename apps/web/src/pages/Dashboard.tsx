@@ -1,96 +1,154 @@
-import React, { useEffect, useState } from 'react';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar, PieChart, Pie, Cell } from 'recharts';
+import React, { useEffect, useMemo, useState } from 'react';
+import { ArrowUpRight, CheckCircle2, Clock3, RefreshCw, TriangleAlert } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { EriClient } from '../api/client';
 
-const dummyBurnData = [
-  { time: '08:00', resolved: 400, new: 450 },
-  { time: '09:00', resolved: 800, new: 900 },
-  { time: '10:00', resolved: 1500, new: 1200 },
-  { time: '11:00', resolved: 2300, new: 1400 },
-  { time: '12:00', resolved: 3200, new: 1600 },
-];
+type Metrics = {
+  total: number;
+  closed: number;
+  pending_human: number;
+  failed: number;
+  verified_reversals: number;
+  auto_resolution_rate: number;
+};
 
-const dummyMTTR = [
-  { name: 'Human Review', time: 14400 }, // 4 hours in seconds
-  { name: 'Eri Auto-Resolve', time: 15 }, // 15 seconds
-];
+const initialMetrics: Metrics = {
+  total: 0, closed: 0, pending_human: 0, failed: 0, verified_reversals: 0, auto_resolution_rate: 0,
+};
+
+const causeGroups = [
+  ['Confirmed failure', 'moss'],
+  ['Unknown / awaiting status', 'ochre'],
+  ['Conflicting evidence', 'clay'],
+  ['Already resolved', 'indigo'],
+] as const;
+
+function Metric({ label, value, note, tone = 'ink' }: { label: string; value: string | number; note: string; tone?: string }) {
+  const color = tone === 'moss' ? 'text-[var(--eri-moss)]' : tone === 'ochre' ? 'text-[var(--eri-ochre)]' : tone === 'clay' ? 'text-[var(--eri-clay)]' : 'text-[var(--eri-ink)]';
+  return (
+    <div className="panel min-h-[128px] p-[18px]">
+      <div className="eyebrow">{label}</div>
+      <div className={`mono mt-4 text-3xl font-medium ${color}`}>{value}</div>
+      <div className="mt-2 text-xs text-[var(--eri-muted)]">{note}</div>
+    </div>
+  );
+}
 
 export function Dashboard() {
-  const [metrics, setMetrics] = useState({ total: 0, closed: 0, pending_human: 0, failed: 0, verified_reversals: 0, auto_resolution_rate: 0 });
+  const [metrics, setMetrics] = useState<Metrics>(initialMetrics);
+  const [cases, setCases] = useState<any[]>([]);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetch('/api/metrics/summary')
-      .then((response) => {
-        if (!response.ok) throw new Error('Metrics request failed');
-        return response.json();
-      })
-      .then(setMetrics)
-      .catch((error) => console.error('[Dashboard] metrics unavailable', error));
-  }, []);
+  const load = async () => {
+    setLoading(true);
+    try {
+      const [metricData, caseData] = await Promise.all([EriClient.getMetrics(), EriClient.getCases()]);
+      setMetrics({ ...initialMetrics, ...metricData });
+      setCases(Array.isArray(caseData) ? caseData : caseData.cases || []);
+      setError('');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Unable to load operations data');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => { void load(); }, []);
+
+  const groupCounts = useMemo(() => {
+    const counts = cases.reduce<Record<string, number>>((acc, item) => {
+      const state = String(item.derived_state || item.status || '').toUpperCase();
+      const key = state.includes('FAILED') ? 'Confirmed failure' : state.includes('INDETERMINATE') || state.includes('WAITING') ? 'Unknown / awaiting status' : state.includes('CONFLICT') ? 'Conflicting evidence' : 'Already resolved';
+      acc[key] = (acc[key] || 0) + 1;
+      return acc;
+    }, {});
+    return causeGroups.map(([label, tone]) => ({ label, tone, count: counts[label] || 0 }));
+  }, [cases]);
+
+  const recentCases = cases.slice(0, 6);
 
   return (
-    <div className="space-y-6">
-      <h1 className="text-2xl font-bold text-gray-900 dark:text-white">Ops Dashboard</h1>
-      
-      {/* Top Metrics Row */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-          <div className="text-sm font-medium text-gray-500 dark:text-gray-400">Total Cases (24h)</div>
-          <div className="mt-2 text-3xl font-semibold text-gray-900 dark:text-white">{metrics.total}</div>
+    <div className="space-y-8">
+      <section className="flex flex-col justify-between gap-5 border-b border-[var(--eri-border)] pb-7 md:flex-row md:items-end">
+        <div>
+          <div className="eyebrow">Dispute operations · live view</div>
+          <h1 className="display mt-3 text-4xl leading-tight tracking-[-0.035em] text-[var(--eri-ink)] sm:text-5xl">Evidence to resolution.</h1>
+          <p className="mt-3 max-w-xl text-sm leading-6 text-[var(--eri-muted)]">A current view of cases, deterministic findings, and the work that still needs an officer.</p>
         </div>
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-          <div className="text-sm font-medium text-success-600 dark:text-success-400">Auto-Resolved</div>
-          <div className="mt-2 text-3xl font-semibold text-success-600 dark:text-success-400">{metrics.verified_reversals}</div>
-          <div className="text-xs text-gray-500 mt-1">{Number(metrics.auto_resolution_rate).toFixed(1)}% automatic rate</div>
-        </div>
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-          <div className="text-sm font-medium text-warning-600 dark:text-warning-400">Pending Human Review</div>
-          <div className="mt-2 text-3xl font-semibold text-warning-600 dark:text-warning-400">{metrics.pending_human}</div>
-        </div>
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-          <div className="text-sm font-medium text-danger-600 dark:text-danger-400">Failed / Errors</div>
-          <div className="mt-2 text-3xl font-semibold text-danger-600 dark:text-danger-400">{metrics.failed}</div>
-        </div>
-      </div>
+        <button onClick={() => void load()} className="focus-ring inline-flex items-center gap-2 self-start border border-[var(--eri-indigo-600)] px-4 py-2.5 text-sm font-semibold text-[var(--eri-indigo-700)] hover:bg-white md:self-auto">
+          <RefreshCw size={15} className={loading ? 'animate-spin' : ''} /> Refresh
+        </button>
+      </section>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Burn-down Chart */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-          <h2 className="text-lg font-medium text-gray-900 dark:text-white mb-4">Resolution Velocity</h2>
-          <div className="h-64">
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={dummyBurnData}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="time" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Line type="monotone" dataKey="resolved" stroke="#16a34a" strokeWidth={2} />
-                <Line type="monotone" dataKey="new" stroke="#4f46e5" strokeWidth={2} />
-              </LineChart>
-            </ResponsiveContainer>
+      {error && <div className="border-l-4 border-[var(--eri-clay)] bg-white p-4 text-sm text-[var(--eri-clay)]">{error}. Check that the gateway is running.</div>}
+
+      <section className="grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+        <Metric label="Cases monitored" value={metrics.total} note="Current persisted case volume" />
+        <Metric label="Verified reversals" value={metrics.verified_reversals} note={`${Number(metrics.auto_resolution_rate || 0).toFixed(1)}% automatic resolution rate`} tone="moss" />
+        <Metric label="Awaiting officer" value={metrics.pending_human} note="Requires human decision" tone="ochre" />
+        <Metric label="Failed / unresolved" value={metrics.failed} note="Needs investigation or recovery" tone="clay" />
+      </section>
+
+      <section className="grid items-start gap-6 lg:grid-cols-[1.15fr_.85fr]">
+        <div className="panel overflow-hidden">
+          <div className="flex items-center justify-between border-b border-[var(--eri-border)] p-[18px]">
+            <div>
+              <div className="eyebrow">Live queue</div>
+              <h2 className="display mt-1 text-xl">Recent cases</h2>
+            </div>
+            <Link to="/review-queue" className="inline-flex items-center gap-1 text-sm font-semibold text-[var(--eri-indigo-600)]">Review queue <ArrowUpRight size={14} /></Link>
+          </div>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[620px] text-left">
+              <thead>
+                <tr className="border-b border-[var(--eri-border)] text-[11px] uppercase tracking-[.12em] text-[var(--eri-muted)]">
+                  <th className="px-[18px] py-3 font-semibold">Reference</th>
+                  <th className="px-3 py-3 font-semibold">State</th>
+                  <th className="px-3 py-3 font-semibold">Created</th>
+                  <th className="px-[18px] py-3 text-right font-semibold">Amount</th>
+                </tr>
+              </thead>
+              <tbody>
+                {recentCases.map((item) => {
+                  const state = String(item.derived_state || item.status || 'UNKNOWN');
+                  const failed = state.includes('FAILED') || state.includes('CONFLICT');
+                  const pending = state.includes('INDETERMINATE') || state.includes('WAITING') || state.includes('PENDING');
+                  return (
+                    <tr key={item.id} className="border-b border-[var(--eri-border)] last:border-0 hover:bg-[var(--eri-paper)]">
+                      <td className="px-[18px] py-4"><Link to={`/cases/${item.id}`} className="mono text-sm text-[var(--eri-indigo-600)] hover:underline">{item.transaction_ref || item.id}</Link></td>
+                      <td className="px-3 py-4 text-sm"><span className="inline-flex items-center gap-2"><span className={`state-dot ${failed ? 'bg-[var(--eri-clay)]' : pending ? 'bg-[var(--eri-ochre)]' : 'bg-[var(--eri-moss)]'}`} />{state.replaceAll('_', ' ')}</span></td>
+                      <td className="mono px-3 py-4 text-xs text-[var(--eri-muted)]">{item.created_at ? new Date(item.created_at).toLocaleDateString() : '—'}</td>
+                      <td className="mono px-[18px] py-4 text-right text-sm">₦{Number(item.amount || 0).toLocaleString()}</td>
+                    </tr>
+                  );
+                })}
+                {!loading && recentCases.length === 0 && <tr><td colSpan={4} className="px-[18px] py-10 text-center text-sm text-[var(--eri-muted)]">No cases have been ingested yet.</td></tr>}
+              </tbody>
+            </table>
           </div>
         </div>
 
-        {/* MTTR Comparison */}
-        <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700">
-          <h2 className="text-lg font-medium text-gray-900 dark:text-white mb-4">MTTR Comparison (Seconds)</h2>
-          <div className="h-64">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={dummyMTTR}>
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis scale="log" domain={['auto', 'auto']} />
-                <Tooltip />
-                <Bar dataKey="time" fill="#6366f1">
-                  {dummyMTTR.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={index === 1 ? '#22c55e' : '#f59e0b'} />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
+        <div className="panel p-[18px]">
+          <div className="eyebrow">System reading</div>
+          <h2 className="display mt-1 text-xl">Case composition</h2>
+          <div className="mt-6 space-y-5">
+            {groupCounts.map(({ label, count, tone }) => (
+              <div key={label}>
+                <div className="mb-2 flex justify-between gap-4 text-sm"><span>{label}</span><span className="mono text-[var(--eri-muted)]">{count}</span></div>
+                <div className="h-2 bg-[var(--eri-border)]"><div className={`h-full ${tone === 'moss' ? 'bg-[var(--eri-moss)]' : tone === 'ochre' ? 'bg-[var(--eri-ochre)]' : tone === 'clay' ? 'bg-[var(--eri-clay)]' : 'bg-[var(--eri-indigo-500)]'}`} style={{ width: `${Math.max(count ? 10 : 0, Math.min(100, cases.length ? (count / cases.length) * 100 : 0))}%` }} /></div>
+              </div>
+            ))}
           </div>
+          <div className="mt-7 border-t border-[var(--eri-border)] pt-4 text-xs leading-5 text-[var(--eri-muted)]">Eri separates financial evidence from interpretation. Unknown states remain unknown until a permitted status query resolves them.</div>
         </div>
-      </div>
+      </section>
+
+      <section className="grid gap-3 md:grid-cols-3">
+        <div className="panel flex gap-3 p-[18px]"><CheckCircle2 className="mt-0.5 text-[var(--eri-moss)]" size={18} /><div><div className="text-sm font-semibold">Deterministic authority</div><p className="mt-1 text-xs leading-5 text-[var(--eri-muted)]">Policies, not an LLM, govern money-moving actions.</p></div></div>
+        <div className="panel flex gap-3 p-[18px]"><Clock3 className="mt-0.5 text-[var(--eri-ochre)]" size={18} /><div><div className="text-sm font-semibold">SLA aware</div><p className="mt-1 text-xs leading-5 text-[var(--eri-muted)]">Indeterminate cases are monitored rather than guessed.</p></div></div>
+        <div className="panel flex gap-3 p-[18px]"><TriangleAlert className="mt-0.5 text-[var(--eri-clay)]" size={18} /><div><div className="text-sm font-semibold">Audit by default</div><p className="mt-1 text-xs leading-5 text-[var(--eri-muted)]">Lifecycle transitions remain visible and verifiable.</p></div></div>
+      </section>
     </div>
   );
 }

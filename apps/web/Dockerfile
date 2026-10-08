@@ -5,6 +5,8 @@ COPY pnpm-workspace.yaml package.json pnpm-lock.yaml* ./
 COPY apps/web/package.json apps/web/
 RUN pnpm install --frozen-lockfile --prod=false --shamefully-hoist
 COPY apps/web/ apps/web/
+ARG VITE_API_URL=http://localhost:3000
+ENV VITE_API_URL=$VITE_API_URL
 RUN npm install --prefix apps/web
 RUN pnpm --filter @eri/web build
 WORKDIR /app/apps/web

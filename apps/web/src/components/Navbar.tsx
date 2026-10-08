@@ -1,35 +1,50 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { Shield, LayoutDashboard, ListTodo, FileText, Activity } from 'lucide-react';
+import { Activity, ArrowUpRight, FileText, LayoutDashboard, ListTodo } from 'lucide-react';
+import { NavLink, Link } from 'react-router-dom';
+
+const navItems = [
+  { to: '/dashboard', label: 'Overview', icon: LayoutDashboard },
+  { to: '/review-queue', label: 'Review queue', icon: ListTodo },
+  { to: '/policies', label: 'Policies', icon: FileText },
+];
 
 export function Navbar() {
   return (
-    <nav className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              <Shield className="h-8 w-8 text-primary-600" />
-              <span className="ml-2 text-xl font-bold text-gray-900 dark:text-white">Eri</span>
-            </div>
-            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-              <NavLink to="/dashboard" className={({isActive}) => `inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${isActive ? 'border-primary-500 text-gray-900 dark:text-white' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-300'}`}>
-                <LayoutDashboard className="mr-2 w-4 h-4" /> Dashboard
+    <header className="border-b border-[var(--eri-border)] bg-[var(--eri-paper)]">
+      <div className="mx-auto flex min-h-[72px] max-w-[1440px] items-center justify-between gap-6 px-5 sm:px-8 lg:px-12">
+        <div className="flex items-center gap-8">
+          <Link to="/" className="display text-[25px] font-semibold tracking-[-0.03em] text-[var(--eri-indigo-700)]">Ẹrí</Link>
+          <span className="hidden h-5 w-px bg-[var(--eri-border)] md:block" />
+          <span className="hidden text-sm text-[var(--eri-muted)] md:block">Dispute operations</span>
+          <nav className="hidden items-center gap-1 lg:flex">
+            {navItems.map(({ to, label, icon: Icon }) => (
+              <NavLink
+                key={to}
+                to={to}
+                className={({ isActive }) =>
+                  `focus-ring inline-flex items-center gap-2 border-b-2 px-3 py-5 text-sm ${isActive
+                    ? 'border-[var(--eri-indigo-600)] text-[var(--eri-indigo-700)]'
+                    : 'border-transparent text-[var(--eri-muted)] hover:text-[var(--eri-ink)]'}`
+                }
+              >
+                <Icon size={15} strokeWidth={1.8} />
+                {label}
               </NavLink>
-              <NavLink to="/review-queue" className={({isActive}) => `inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${isActive ? 'border-primary-500 text-gray-900 dark:text-white' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-300'}`}>
-                <ListTodo className="mr-2 w-4 h-4" /> Review Queue
-              </NavLink>
-              <NavLink to="/policies" className={({isActive}) => `inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${isActive ? 'border-primary-500 text-gray-900 dark:text-white' : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 dark:text-gray-300'}`}>
-                <FileText className="mr-2 w-4 h-4" /> Policies
-              </NavLink>
-            </div>
-          </div>
-          <div className="flex items-center">
-            <Activity className="h-5 w-5 text-success-500 mr-2" />
-            <span className="text-sm text-gray-500 dark:text-gray-400">System Active</span>
-          </div>
+            ))}
+          </nav>
+        </div>
+        <div className="flex items-center gap-4 text-sm">
+          <Link to="/" className="hidden items-center gap-1 text-[var(--eri-muted)] hover:text-[var(--eri-ink)] sm:flex">
+            Product <ArrowUpRight size={14} />
+          </Link>
+          <span className="hidden h-5 w-px bg-[var(--eri-border)] sm:block" />
+          <span className="flex items-center gap-2 text-[var(--eri-muted)]">
+            <Activity size={15} className="text-[var(--eri-moss)]" />
+            <span className="hidden sm:inline">System active</span>
+          </span>
+          <span className="grid h-8 w-8 place-items-center rounded-full bg-[var(--eri-indigo-700)] text-xs font-semibold text-white">AO</span>
         </div>
       </div>
-    </nav>
+    </header>
   );
 }

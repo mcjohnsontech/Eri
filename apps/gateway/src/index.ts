@@ -166,6 +166,12 @@ app.get('/openapi.json', (req: Request, res: Response) => res.json(openApiDocume
 app.use('/v1/disputes', verifyWebhookSignature, disputesRouter);
 
 // Case specific endpoints
+app.get('/v1/cases', async (req: Request, res: Response) => {
+  const limit = Math.min(Math.max(Number.parseInt(String(req.query.limit || '50'), 10) || 50, 1), 200);
+  const offset = Math.max(Number.parseInt(String(req.query.offset || '0'), 10) || 0, 0);
+  res.json({ cases: await casesRepo.findAll(limit, offset), limit, offset });
+});
+
 app.get('/v1/cases/:case_id', async (req: Request, res: Response) => {
   const c = await casesRepo.findById(req.params.case_id);
   if (!c) return res.status(404).json({ error: 'Not found' });
