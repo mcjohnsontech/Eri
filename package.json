@@ -1,0 +1,20 @@
+{
+  "name": "eri",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Autonomous bank transaction dispute resolution engine",
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev": "docker-compose up",
+    "build": "pnpm -r build",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "db:migrate": "node scripts/migrate.js",
+    "seed": "node simulators/scenario-generator/dist/index.js"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "simulators/*"
+  ]
+}

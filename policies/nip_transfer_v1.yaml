@@ -1,0 +1,27 @@
+name: nip_transfer
+version: 1
+type: dispute_resolution
+active_from: "2026-01-01T00:00:00Z"
+global:
+  blocked_customer_flags: []
+  escalate_if:
+    confidence_below: 0.5
+    customer_text_contradicts_state: true
+    amount_gt: 100000
+    repeat_disputes_gt: 3
+rules:
+  - id: NIP-FAILED-NOT-REVERSED
+    derived_state: FAILED_NOT_REVERSED
+    action: ledger.reverse_debit
+    mode: AUTO
+    rationale: Customer was debited and the transfer failed without a reversal.
+  - id: NIP-COMPLETED
+    derived_state: COMPLETED
+    action: close_not_upheld
+    mode: AUTO
+    rationale: The transfer completed successfully; the dispute is not upheld.
+  - id: NIP-FAILED-REVERSED
+    derived_state: FAILED_REVERSED
+    action: close_not_upheld
+    mode: AUTO
+    rationale: The failed transfer has already been reversed.

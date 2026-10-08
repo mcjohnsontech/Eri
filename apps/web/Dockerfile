@@ -1,0 +1,13 @@
+FROM node:20-alpine
+WORKDIR /app
+RUN npm install -g pnpm
+COPY pnpm-workspace.yaml package.json pnpm-lock.yaml* ./
+COPY apps/web/package.json apps/web/
+RUN pnpm install --frozen-lockfile --prod=false --shamefully-hoist
+COPY apps/web/ apps/web/
+RUN npm install --prefix apps/web
+RUN pnpm --filter @eri/web build
+WORKDIR /app/apps/web
+RUN npm install -g serve
+EXPOSE 5173
+CMD ["serve", "-s", "dist", "-l", "5173"]

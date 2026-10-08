@@ -1,0 +1,21 @@
+{
+  "name": "@eri/executor",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "dependencies": {
+    "@eri/core": "workspace:*",
+    "@eri/connectors": "workspace:*",
+    "pg": "^8.11.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/pg": "^8.11.0",
+    "@types/node": "^20.0.0"
+  }
+}

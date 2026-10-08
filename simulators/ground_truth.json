@@ -1,0 +1,2502 @@
+[
+  {
+    "dispute_ref": "CAS-21870be2",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-478b8dc4",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-960d9f65",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-b1456099",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-5b1dd5c2",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-855977ed",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-09b121f9",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-de792614",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-78208263",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-81fb685e",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-4b3f1eb2",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-37508bf3",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-b20ecaa8",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-b815400e",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-ce637216",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-4af8834e",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-59083f69",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-1efca715",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-3180ddf6",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-4da70706",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-452f4de0",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-ee50e415",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-47a1a604",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-f6a43290",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-7bd30441",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-a08f1fbb",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-8c679e86",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-dc39f4e7",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-348ff526",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-3103bc15",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-989fadc7",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-3d2cc45a",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-75794768",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-3c23b260",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-06413343",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-81896c83",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-24f09166",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-bb823a55",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-219f7322",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-11338b2a",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-f87e21f1",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-90b30516",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-5863f7b0",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-40d6b3f2",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-ad68284e",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-3dca5005",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-c5c396d3",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-8c11a941",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-0c8a708f",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-8f47803e",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-d60c9841",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-2c42982a",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-ca71f558",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-228ed4f0",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-b8f8ee52",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-7fe85e01",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-d814f788",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-8f4e646f",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-06998d05",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-e147812f",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-d8ccf98e",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-86215701",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-da10ef61",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-7e3d31f0",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-d46a8853",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-5593bd3e",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-2342fb07",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-6e5efa38",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-87d43249",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-be3d36ba",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-bff86f69",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-ec57fed2",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-6f05efe6",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-ce14fcc8",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-8e0301b1",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-e147a062",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-3fa6a16f",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-9984971e",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-a374aae7",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-5bfecf03",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-9533c043",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-95d706fa",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-901a477e",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-8395c68e",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-798b06e5",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-3a3d7b5e",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-d8d0722e",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-aef919d8",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-0358a29c",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-48d09b99",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-1929fbca",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-9c6f071d",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-3d0ee275",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-8c954d6b",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-ea3f7e1f",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-97db0e80",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-36cb11a1",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-554cfc67",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-b4d9e9a9",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-c14ee3a8",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-26a244cf",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-23fed4d4",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-d6f44b25",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-f77721cf",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-a40a0af0",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-5a193937",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-20b1e786",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-567b05e9",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-85c08238",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-66c2fe8b",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-e86181b9",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-f0713281",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-521bb891",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-c42a8966",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-7005d794",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-59a1d43f",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-1d1d4af6",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-7f835773",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-d1464bfd",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-53a191a8",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-a4d44b64",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-bd38ecb0",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-ea9ba42d",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-0891ab75",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-6712f16c",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-00cb3018",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-5774dd80",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-30ab3c14",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-cad3809e",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-4578c237",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-d9c1d061",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-4fc7f9a8",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-ef6635fb",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-4b6efd28",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-3950af23",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-38f6b5f5",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-40847e68",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-d96ce01b",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-c6b51159",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-e8902d43",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-6c075f62",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-bbef1ac4",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-75dfec94",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-9d0bb01f",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-0698e65f",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-0c8c50c2",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-4e4d7496",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-01e0f8e5",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-f66af1fa",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-c49322b4",
+    "expected_outcome": "AUTO_REVERSE",
+    "scenario_tag": "FAILED_NOT_REVERSED_UNDER_100K"
+  },
+  {
+    "dispute_ref": "CAS-7e9090bf",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-46d7a697",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-7837cbdc",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-c62982ef",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-15dd0c29",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-57550e9f",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-5a4f8b7c",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-7d607329",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-85273ee9",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-16c5aaa5",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-927f39ff",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-62c77244",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-0fabfa2c",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-2c85c83b",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-2efc598f",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-a0db1d3a",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-d450e0fe",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-2b7e6f6e",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-04027867",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-14fc4629",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-01cfa93c",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-52c2c77e",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-afcd3975",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-1a6944ab",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-77809490",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-e5fdcd1f",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-9cfaffb7",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-67e92095",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-bb191af3",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-777469b1",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-15dcab17",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-95af1897",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-65d06cc1",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-3b2e2a20",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-81600c88",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-4829d2e1",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-7931f4d1",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-ab304ad0",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-6117c16b",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-337e1db3",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-fc78d3d9",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-74a244d4",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-9a8d7160",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-d9b987df",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-165388f3",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-2fe0204b",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-b25debc8",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-80920bd9",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-807ac0ff",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-1dc81225",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-9c0e53ad",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-01d527c4",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-619a9b4f",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-2086471e",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-bb60d837",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-dce92873",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-308301fc",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-720137c7",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-0f0e2d52",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-2844b847",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-aedcf550",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-876ec41f",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-6b3c4ef5",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-c63e9ffe",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-9f68026c",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-39d509ca",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-d26b54eb",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-fc195905",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-c8089d64",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-bb0841b3",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-42faff17",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-1f706eee",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-9054f009",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-4bdc2089",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-858a05bd",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-d0f2ef86",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-9ac71205",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-f5a39907",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-946f4730",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-181ce4a2",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-7e15e603",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-1b6baec9",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-c9e528db",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-1911f38b",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-3dff107f",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-e9fec245",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-bcf646e1",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-6cffe053",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-4bd2c361",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-606c16af",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-864e73db",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-509d8332",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-353b3fda",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-446e9e96",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-744660c3",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-566e05f1",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-0272050b",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-b7e5a58d",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-4832787c",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-5be16f4c",
+    "expected_outcome": "AUTO_CLOSE_NOT_UPHELD",
+    "scenario_tag": "COMPLETED_MISTAKEN"
+  },
+  {
+    "dispute_ref": "CAS-bef1e7a6",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-e123375a",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-888da1cb",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-352edc08",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-853a1ddf",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-7d3a3276",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-5ad96222",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-de19efd2",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-1ef2b4fe",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-611b0eeb",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-7abcc047",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-5b91c824",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-41bafb04",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-762b36e3",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-9c2727c9",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-f21eca68",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-4c24643d",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-01b1d45f",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-d71b12a7",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-001fcd8f",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-b97066f4",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-4b33ab95",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-195b1510",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-508653a9",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-1477f747",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-c0909eca",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-616c1738",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-543792e2",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-a1c1a209",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-0777a819",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-ba0a9970",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-33736801",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-8905c065",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-362a63ad",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-0212f140",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-706a75a0",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-8ef65001",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-01cb285e",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-0e756d17",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-eaf4e764",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-f1435681",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-5384c7d3",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-2afcfcdb",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-fd264557",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-c55d252a",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-687eacb2",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-a04af760",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-8b535836",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-849695c5",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-b5a69c9a",
+    "expected_outcome": "AUTO_CLOSE_REVERSED",
+    "scenario_tag": "ALREADY_REVERSED"
+  },
+  {
+    "dispute_ref": "CAS-f31a0450",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-ae774a2e",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-5bf98588",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-ae83e5ed",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-a9c99e44",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-c03276c4",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-d5cc5b08",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-b521e904",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-fe90b6b1",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-4b386863",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-5bc97bb4",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-56f8fac3",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-d0ce3030",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-c1f3eddb",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-afd2aa27",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-db460a9b",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-c87798bf",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-6d8fe788",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-f2fb3f34",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-9a9974da",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-7f95f6ce",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-7d64a3c1",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-0ea75e7e",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-0c32e943",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-35d06ffa",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-73bd2e3f",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-30259eb9",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-24160e25",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-6ee2409a",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-e2fd8cab",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-aec95c16",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-fafaea9a",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-2e2d799e",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-f8f7f8c0",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-4c8d196a",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-e03c502f",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-788a6ac7",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-752bc87c",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-3448aa0c",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-1f673521",
+    "expected_outcome": "DEFER",
+    "scenario_tag": "IN_FLIGHT"
+  },
+  {
+    "dispute_ref": "CAS-b55389a8",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-7fa49054",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-179c18fd",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-26f44d5b",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-453923f6",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-adeae57d",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-4e029665",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-2a812b71",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-2c9f0900",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-3c346abd",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-b7fadea8",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-a520b8c0",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-aa26bd66",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-0fd937af",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-a7fadb7e",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-b5ac595c",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-0a8daa4f",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-92ac88d9",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-b9ada029",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-0792aa8d",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-76fd9c6d",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-d3007650",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-b9839c73",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-0babdc0a",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-0edb8d53",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-4e9f4d96",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-bf4e05bd",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-484edff4",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-4f4397e3",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-682aea7f",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-97de0c07",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-4febe241",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-fdde4bb8",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-42836a17",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-e3bc5cca",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-04e5c07e",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-bb5d767e",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-2c8ccb03",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-8f0cf300",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-b08b4a50",
+    "expected_outcome": "STATUS_QUERY",
+    "scenario_tag": "INDETERMINATE"
+  },
+  {
+    "dispute_ref": "CAS-f3f80e73",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-7652a594",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-d2d610d3",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-d2e34667",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-0d6dab9a",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-2ae982a3",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-c9e84b81",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-e81f61c4",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-bb466431",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-39fb46df",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-2c9be653",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-5251da3d",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-1f2587e0",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-609da3c0",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-68e964c1",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-deaf7046",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-7a9d038e",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-f5069e21",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-1b7f0a5d",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-f2555fc0",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-f9cb650b",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-49516e7a",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-61a9f400",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-53f8656e",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-4ca54e52",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-7adbd8ae",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-6e9642cd",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-ca5a89d7",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-7ba0de4d",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-d6afc5a0",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-c914deb4",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-72d27d7a",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-e24a5d67",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-d9e487da",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-650d4ecd",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-52e59275",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-6f993beb",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-921e4d29",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-bab767f8",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-97bf17e3",
+    "expected_outcome": "ESCALATE_APPROVAL",
+    "scenario_tag": "FAILED_NOT_REVERSED_OVER_100K"
+  },
+  {
+    "dispute_ref": "CAS-cf722f9c",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-2b8a3d96",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-a30e21dc",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-e1db75fb",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-a81c1664",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-201f229d",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-993d8005",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-aa467351",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-995894ac",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-80b634d5",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-99e6ef2d",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-0666014b",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-92bd302d",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-29faf7a1",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-29039c96",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-ff88771e",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-be44c899",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-b18f5642",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-208f3b1f",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-55be004b",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-c831d99a",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-18445ea0",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-2b7e5265",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-e258eac1",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-d4d4e85f",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-c6811e27",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-0c6afe27",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-8e71af15",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-e5abc41c",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-fbb8d8e4",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONFLICT"
+  },
+  {
+    "dispute_ref": "CAS-4221b51e",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-567c5c42",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-33aeb604",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-7ffbad93",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-a1717a51",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-ed1d225b",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-1cb5d8c0",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-7611c137",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-030f723d",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-26112a27",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-fc85a149",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-69cc7978",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-3f4f208b",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-1d20e8d8",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-73ea4d0e",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-6cc807be",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-52768da9",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-0dac91db",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-89047607",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-5753d278",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-8525d27a",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-9d17d64b",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-8de65b23",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-c8cea770",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-3e823732",
+    "expected_outcome": "ESCALATE",
+    "scenario_tag": "CONTRADICTORY_CLAIM"
+  },
+  {
+    "dispute_ref": "CAS-2962d700",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-e83999c1",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-52999cee",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-e96ed76d",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-ea5689d9",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-4f4f1fa3",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-c0763d79",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-3935260a",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-7be44e6c",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-1e5822dc",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-b149bab3",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-6b24e8ca",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-b172569a",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-365e2065",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-3d27b012",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-e05b03f0",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-ac70f3e6",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-b7c77fe8",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-5f66efca",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-17202ed9",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-3afdd8cf",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-c9d9dad2",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-065f3750",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-056776ec",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  },
+  {
+    "dispute_ref": "CAS-0be98cd5",
+    "expected_outcome": "LINK_CLOSE",
+    "scenario_tag": "DUPLICATE"
+  }
+]

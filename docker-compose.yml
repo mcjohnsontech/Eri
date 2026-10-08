@@ -1,0 +1,143 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: ankane/pgvector:latest
+    environment:
+      POSTGRES_USER: eri
+      POSTGRES_PASSWORD: eri
+      POSTGRES_DB: eri
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./scripts/migrate.sql:/docker-entrypoint-initdb.d/01-schema.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U eri -d eri"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  mock-ledger:
+    build:
+      context: .
+      dockerfile: simulators/mock-ledger/Dockerfile
+    ports:
+      - "4001:4001"
+    environment:
+      PORT: 4001
+    restart: unless-stopped
+
+  mock-switch:
+    build:
+      context: .
+      dockerfile: simulators/mock-switch/Dockerfile
+    ports:
+      - "4002:4002"
+    environment:
+      PORT: 4002
+    restart: unless-stopped
+
+  mock-settlement:
+    build:
+      context: .
+      dockerfile: simulators/mock-settlement/Dockerfile
+    ports:
+      - "4003:4003"
+    environment:
+      PORT: 4003
+    restart: unless-stopped
+
+  mock-dispute:
+    build:
+      context: .
+      dockerfile: simulators/mock-dispute/Dockerfile
+    ports:
+      - "4004:4004"
+    environment:
+      PORT: 4004
+      ERI_GATEWAY_URL: http://gateway:3000
+    restart: unless-stopped
+
+  gateway:
+    build:
+      context: .
+      dockerfile: apps/gateway/Dockerfile
+    ports:
+      - "3000:3000"
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://eri:eri@postgres:5432/eri
+      REDIS_URL: redis://redis:6379
+      MOCK_LEDGER_URL: http://mock-ledger:4001
+      MOCK_SWITCH_URL: http://mock-switch:4002
+      MOCK_SETTLEMENT_URL: http://mock-settlement:4003
+      MOCK_DISPUTE_URL: http://mock-dispute:4004
+      ENABLE_ADVISORY_AI: "false"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  worker:
+    build:
+      context: .
+      dockerfile: apps/worker/Dockerfile
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql://eri:eri@postgres:5432/eri
+      REDIS_URL: redis://redis:6379
+      MOCK_LEDGER_URL: http://mock-ledger:4001
+      MOCK_SWITCH_URL: http://mock-switch:4002
+      MOCK_SETTLEMENT_URL: http://mock-settlement:4003
+      MOCK_DISPUTE_URL: http://mock-dispute:4004
+      ENABLE_ADVISORY_AI: "false"
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    ports:
+      - "5173:5173"
+    environment:
+      VITE_API_URL: http://localhost:3000
+    restart: unless-stopped
+
+  scenario-generator:
+    build:
+      context: .
+      dockerfile: simulators/scenario-generator/Dockerfile
+    environment:
+      DATABASE_URL: postgresql://eri:eri@postgres:5432/eri
+      MOCK_LEDGER_URL: http://mock-ledger:4001
+      MOCK_SWITCH_URL: http://mock-switch:4002
+      MOCK_SETTLEMENT_URL: http://mock-settlement:4003
+      MOCK_DISPUTE_URL: http://mock-dispute:4004
+    depends_on:
+      postgres:
+        condition: service_healthy
+    profiles:
+      - seed
+
+volumes:
+  postgres_data:

@@ -1,0 +1,38 @@
+{
+  "info": {
+    "name": "Eri MVP",
+    "_postman_id": "eri-mvp-local",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:3000" },
+    { "key": "caseId", "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "request": { "method": "GET", "url": "{{baseUrl}}/v1/health" }
+    },
+    {
+      "name": "Submit dispute",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\"external_id\":\"TX1004\",\"transaction_ref\":\"TX1004\",\"amount\":50,\"currency\":\"USD\",\"reason\":\"Debit successful but beneficiary not credited\",\"customer_id\":\"demo-customer\"}" },
+        "url": "{{baseUrl}}/v1/disputes"
+      }
+    },
+    {
+      "name": "Inspect case",
+      "request": { "method": "GET", "url": "{{baseUrl}}/v1/cases/{{caseId}}" }
+    },
+    {
+      "name": "Inspect evidence",
+      "request": { "method": "GET", "url": "{{baseUrl}}/v1/cases/{{caseId}}/evidence" }
+    },
+    {
+      "name": "Inspect audit",
+      "request": { "method": "GET", "url": "{{baseUrl}}/v1/cases/{{caseId}}/audit" }
+    }
+  ]
+}

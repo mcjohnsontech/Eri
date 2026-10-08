@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+  title: Eri MVP API
+  version: 0.1.0
+  description: Simulated, evidence-first transaction dispute resolution API.
+servers:
+  - url: http://localhost:3000
+paths:
+  /v1/health:
+    get:
+      responses:
+        '200': { description: Healthy }
+        '503': { description: Degraded }
+  /v1/disputes:
+    post:
+      summary: Submit a signed dispute
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Dispute'
+      responses:
+        '202': { description: Accepted }
+        '400': { description: Invalid payload }
+  /v1/cases/{case_id}:
+    get:
+      parameters: [{ $ref: '#/components/parameters/CaseId' }]
+      responses:
+        '200': { description: Case }
+        '404': { description: Not found }
+  /v1/cases/{case_id}/evidence:
+    get:
+      parameters: [{ $ref: '#/components/parameters/CaseId' }]
+      responses: { '200': { description: Evidence and canonical timeline } }
+  /v1/cases/{case_id}/audit:
+    get:
+      parameters: [{ $ref: '#/components/parameters/CaseId' }]
+      responses: { '200': { description: Chained audit entries } }
+  /v1/metrics/summary:
+    get:
+      responses: { '200': { description: Operational metrics } }
+components:
+  parameters:
+    CaseId:
+      name: case_id
+      in: path
+      required: true
+      schema: { type: string, format: uuid }
+  schemas:
+    Dispute:
+      type: object
+      required: [external_id, amount, currency, reason, customer_id]
+      properties:
+        external_id: { type: string }
+        transaction_ref: { type: string }
+        amount: { type: number, minimum: 0 }
+        currency: { type: string, minLength: 3, maxLength: 3 }
+        reason: { type: string }
+        customer_id: { type: string }

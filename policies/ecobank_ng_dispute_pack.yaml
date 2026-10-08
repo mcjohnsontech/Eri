@@ -1,0 +1,15 @@
+name: ecobank_ng_dispute_pack
+version: 1
+type: dispute_resolution
+active_from: "2026-01-01T00:00:00Z"
+global:
+  blocked_customer_flags: []
+  escalate_if:
+    amount_gt: 100000
+rules:
+  - id: ECO-LOW-VALUE-FAILED
+    derived_state: FAILED_NOT_REVERSED
+    amount_lte: 100000
+    action: ledger.reverse_debit
+    mode: AUTO
+    rationale: Low-value failed transfer is eligible for automatic reversal.
