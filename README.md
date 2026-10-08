@@ -16,6 +16,24 @@ invoke a money-moving action.
 > It is not certified CBN/NIBSS software, does not connect to production bank
 > systems, and must not be used to make live financial decisions.
 
+## Contents
+
+- [What you are running](#1-what-you-are-running)
+- [Prerequisites](#2-prerequisites)
+- [First-time setup on Windows](#3-first-time-setup-on-windows)
+- [Start the complete stack](#4-start-the-complete-stack)
+- [Database migration and reset](#5-database-migration-and-reset)
+- [Seed the mock bank services](#6-seed-the-mock-bank-services)
+- [Run the smallest verified vertical slice](#7-run-the-smallest-verified-vertical-slice)
+- [Use the REST API](#8-use-the-rest-api)
+- [Use the web UI](#9-use-the-web-ui)
+- [Understand the safety behavior](#10-understand-the-safety-behavior)
+- [Advisory AI mode](#11-advisory-ai-mode)
+- [Build and test](#12-build-and-test)
+- [Project layout](#13-project-layout)
+- [Troubleshooting](#14-troubleshooting)
+- [Cleanup](#15-cleanup)
+
 ## 1. What you are running
 
 ```text
