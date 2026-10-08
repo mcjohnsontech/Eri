@@ -1,40 +1,97 @@
+<div align="center">
+
 # Eri
 
-Eri is an evidence-first, deterministic transaction-dispute resolution engine
-for simulated Nigerian instant-transfer workflows. It monitors debit events,
-collects evidence from a mock ledger, payment switch, and settlement service,
-reconstructs the transaction state, applies versioned YAML policy, and either:
+**Autonomous transaction monitoring and evidence-first dispute resolution.**
 
-- performs an idempotent, verified reversal;
-- closes a case when beneficiary credit or an existing reversal is proven; or
-- waits/escalates when evidence is unknown or conflicting.
+A policy-driven engine that investigates simulated Nigerian instant-transfer failures, safely reverses confirmed failures, and escalates uncertain cases with a full audit trail.
 
-The Gemini integration is advisory only. It cannot determine financial truth or
-invoke a money-moving action.
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-20%2B-339933?logo=nodedotjs&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-BullMQ-DC382D?logo=redis&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
 
-> **Important:** This repository contains simulators and demo policy parameters.
-> It is not certified CBN/NIBSS software, does not connect to production bank
-> systems, and must not be used to make live financial decisions.
+**[Quick start](#quick-start) · [Architecture](#architecture--services) · [API](#rest-api-reference) · [Testing](#build--test)**
 
-## Contents
+</div>
 
-- [What you are running](#1-what-you-are-running)
-- [Prerequisites](#2-prerequisites)
-- [First-time setup on Windows](#3-first-time-setup-on-windows)
-- [Start the complete stack](#4-start-the-complete-stack)
-- [Database migration and reset](#5-database-migration-and-reset)
-- [Seed the mock bank services](#6-seed-the-mock-bank-services)
-- [Run the smallest verified vertical slice](#7-run-the-smallest-verified-vertical-slice)
-- [Use the REST API](#8-use-the-rest-api)
-- [Use the web UI](#9-use-the-web-ui)
-- [Understand the safety behavior](#10-understand-the-safety-behavior)
-- [Advisory AI mode](#11-advisory-ai-mode)
-- [Build and test](#12-build-and-test)
-- [Project layout](#13-project-layout)
-- [Troubleshooting](#14-troubleshooting)
-- [Cleanup](#15-cleanup)
+> [!IMPORTANT]
+> **Hackathon / simulation only.** Eri uses mock banking services and demonstration policy parameters. It is **not CBN/NIBSS-certified**, does not connect to production banking infrastructure, and must **never** be used to make real financial decisions.
 
-## 1. What you are running
+## Overview
+
+Eri tracks debit events, assembles evidence from the mock ledger, payment switch, and settlement service, reconstructs transaction states, and applies versioned YAML policies. It can:
+
+- **Automatically reverse** eligible, definitively failed transfers using idempotent actions and post-action verification.
+- **Close resolved cases** when a beneficiary credit or an existing reversal is supported by evidence.
+- **Monitor or escalate uncertainty** when transactions are pending, unknown, or contradictory.
+- **Keep an audit trail** of evidence, decisions, and actions for bank operators.
+
+**AI is advisory, never authoritative.** Optional Gemini integration may extract or summarise information, but it cannot establish financial truth or invoke reversal actions.
+
+### Core safety principle
+
+> **Unknown ≠ Failed. A reversal request ≠ a verified refund.**
+
+## Quick start
+
+**Requirements:** Docker Desktop with Compose, Node.js 20+, and pnpm 9. These commands use PowerShell.
+
+```powershell
+# From the repository root
+Copy-Item .env.example .env
+pnpm install
+
+# Start the API, worker, web UI, databases and mock bank services
+docker compose up -d --build
+docker compose ps
+
+# Check API health
+Invoke-RestMethod http://localhost:3000/v1/health
+```
+
+Then open **[http://localhost:5173](http://localhost:5173)** to inspect the dashboard. Update local secrets in `.env` before running and **never commit `.env`**. AI is disabled by default.
+
+For a guided first run, see [Windows setup](#windows-setup), [Seed mock banking data](#seed-mock-banking-data), and [Verify the core workflow](#verify-the-core-workflow).
+
+## Table of contents
+
+- [Overview](#overview)
+- [Quick start](#quick-start)
+- [Architecture & services](#architecture--services)
+- [Prerequisites](#prerequisites)
+- [Windows setup](#windows-setup)
+- [Run the stack](#run-the-stack)
+- [Database migration & reset](#database-migration--reset)
+- [Seed mock banking data](#seed-mock-banking-data)
+- [Verify the core workflow](#verify-the-core-workflow)
+- [REST API reference](#rest-api-reference)
+- [Web dashboard](#web-dashboard)
+- [Transaction safety rules](#transaction-safety-rules)
+- [Optional Gemini advisory AI](#optional-gemini-advisory-ai)
+- [Build & test](#build--test)
+- [Repository structure](#repository-structure)
+- [Troubleshooting](#troubleshooting)
+- [Cleanup](#cleanup)
+- [License](#license)
+
+## Architecture & services
+
+```mermaid
+flowchart LR
+  Ledger[Mock ledger] --> Worker[Eri worker]
+  Switch[Mock switch] --> Worker
+  Settlement[Mock settlement] --> Worker
+  Dispute[Mock dispute system] --> Gateway[API gateway]
+  Gateway --> Worker
+  Worker <--> Postgres[(PostgreSQL / audit store)]
+  Worker <--> Redis[(Redis / BullMQ)]
+  Gateway <--> UI[React review dashboard]
+```
+
+<details>
+<summary>Plain-text architecture (if Mermaid is unavailable)</summary>
 
 ```text
 Mock Ledger ─┐
@@ -45,6 +102,8 @@ Mock Dispute ─▶ Gateway┘
                      │
                      └─▶ React review UI
 ```
+
+</details>
 
 | Component | Default URL/port | Purpose |
 |---|---:|---|
@@ -57,7 +116,9 @@ Mock Dispute ─▶ Gateway┘
 | PostgreSQL | `localhost:5432` | Cases, evidence, actions, audit, SLA data |
 | Redis | `localhost:6379` | BullMQ queue and worker coordination |
 
-## 2. Prerequisites
+---
+
+## Prerequisites
 
 For the recommended workflow, install:
 
@@ -70,12 +131,14 @@ Gemini is optional. Compose disables advisory AI by default so model outages
 cannot block deterministic processing. Only configure a Gemini key if you
 explicitly want to exercise the advisory path.
 
-## 3. First-time setup on Windows
+---
+
+## Windows setup
 
 Open PowerShell in the project directory:
 
 ```powershell
-Set-Location C:\Users\HomePC\Desktop\Eri
+Set-Location "C:\path\to\Eri"
 
 # Create the local environment file.
 Copy-Item .env.example .env
@@ -98,7 +161,9 @@ JWT_SECRET=change_me_in_development
 The Docker Compose file overrides internal service URLs for the gateway and
 worker, so they use Docker DNS names such as `postgres` and `mock-ledger`.
 
-## 4. Start the complete stack
+---
+
+## Run the stack
 
 Build and start every service:
 
@@ -148,7 +213,9 @@ When running from the host, use `localhost` service URLs in the process
 environment. Do not start both host and container copies of the same service:
 they will compete for ports 3000, 4001-4004, or 5173.
 
-## 5. Database migration and reset
+---
+
+## Database migration & reset
 
 Compose applies `scripts/migrate.sql` when a new PostgreSQL volume is created.
 For an existing database, run the migration explicitly:
@@ -173,7 +240,9 @@ reported by `docker volume ls`. This removes local demo data, including audit
 history, cases, and review records. Never use this procedure against a
 production database.
 
-## 6. Seed the mock bank services
+---
+
+## Seed mock banking data
 
 The scenario generator creates 500 deterministic-shape cases and writes the
 hidden oracle labels to `simulators/ground_truth.json`. The oracle is for
@@ -202,7 +271,9 @@ Remove-Item Env:SIMULATOR_HOST
 This uses the simulators' demo-only `POST /eri/v1/seed` endpoints. It does not
 insert the oracle labels into the Eri database.
 
-## 7. Run the smallest verified vertical slice
+---
+
+## Verify the core workflow
 
 The fixed fixtures are the fastest way to confirm that the core safety path is
 working.
@@ -302,7 +373,9 @@ Invoke-RestMethod -Method Post -Uri http://localhost:3000/v1/disputes `
 These scenarios demonstrate that a debit alone is not enough to authorize a
 money-moving action.
 
-## 8. Use the REST API
+---
+
+## REST API reference
 
 ### Submit a dispute
 
@@ -381,7 +454,9 @@ Invoke-RestMethod -Method Post `
 The current demo review endpoint records the decision and audit event. It is
 not a production maker-checker implementation.
 
-## 9. Use the web UI
+---
+
+## Web dashboard
 
 1. Open <http://localhost:5173>.
 2. Use the dashboard to view case totals, closed cases, pending reviews, and
@@ -403,7 +478,9 @@ const activity = new EventSource("http://localhost:3000/v1/activity");
 activity.onmessage = (event) => console.log(JSON.parse(event.data));
 ```
 
-## 10. Understand the safety behavior
+---
+
+## Transaction safety rules
 
 | Evidence state | Expected behavior |
 |---|---|
@@ -418,7 +495,9 @@ activity.onmessage = (event) => console.log(JSON.parse(event.data));
 Every action uses an idempotency key. A reversal request is not treated as
 complete until a subsequent ledger read verifies the reversed state.
 
-## 11. Advisory AI mode
+---
+
+## Optional Gemini advisory AI
 
 AI is disabled by default in Compose:
 
@@ -439,7 +518,9 @@ extract, summarize, or lower confidence, but deterministic reconstruction and
 policy remain authoritative. If Gemini is unavailable, keep AI disabled and
 rerun the deterministic workflow.
 
-## 12. Build and test
+---
+
+## Build & test
 
 ```powershell
 $env:PATH = "$env:APPDATA\npm;$env:PATH"
@@ -456,7 +537,9 @@ pnpm test
 
 The web build may report a bundle-size warning; it does not fail the build.
 
-## 13. Project layout
+---
+
+## Repository structure
 
 ```text
 apps/
@@ -482,7 +565,9 @@ scripts/migrate.sql   PostgreSQL schema
 docs/                 OpenAPI and Postman artifacts
 ```
 
-## 14. Troubleshooting
+---
+
+## Troubleshooting
 
 ### Docker port already in use
 
@@ -510,7 +595,7 @@ docker compose logs worker mock-ledger mock-switch mock-settlement
 
 The migration script is applied automatically only when the PostgreSQL data
 volume is first initialized. Apply it manually or reset the local volume as
-described in [Database migration and reset](#5-database-migration-and-reset).
+described in [Database migration & reset](#database-migration--reset).
 
 ### Gemini returns 503 or rate-limit errors
 
@@ -529,7 +614,9 @@ docker compose build gateway worker web
 Do not run an application Dockerfile with a package directory as its build
 context unless that Dockerfile has been specifically adapted for it.
 
-## 15. Cleanup
+---
+
+## Cleanup
 
 Stop containers but retain local database data:
 
@@ -546,8 +633,11 @@ docker compose down -v
 The second command is destructive to local demo state. Never use it for a
 shared or production database.
 
+---
+
 ## License
 
 Hackathon build. Not for production use.
+#
 #   E r i  
  
