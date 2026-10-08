@@ -37,6 +37,9 @@ importers:
       pg:
         specifier: ^8.11.0
         version: 8.23.1
+      swagger-ui-express:
+        specifier: ^5.0.1
+        version: 5.0.1(express@4.22.3)
       uuid:
         specifier: ^9.0.0
         version: 9.0.1
@@ -59,6 +62,9 @@ importers:
       '@types/pg':
         specifier: ^8.11.0
         version: 8.23.1
+      '@types/swagger-ui-express':
+        specifier: ^4.1.8
+        version: 4.1.8
       '@types/uuid':
         specifier: ^9.0.0
         version: 9.0.8
@@ -898,6 +904,9 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@scarf/scarf@1.4.0':
+    resolution: {integrity: sha512-xxeapPiUXdZAE3che6f3xogoJPeZgig6omHEy1rIY5WVsB3H2BHNnZH+gHG6x91SCWyQCzWGsuL2Hh3ClO5/qQ==}
+
   '@tsconfig/node10@1.0.13':
     resolution: {integrity: sha512-gcLdvR9HO1ZJBypsOGqaP6TFEzb6vIta0KSTLt9NAQ6pXQO3cRgSVyCN6pzYqI9DlJgY71XKO0dpDhCf08b3pg==}
 
@@ -1022,6 +1031,9 @@ packages:
 
   '@types/strip-json-comments@0.0.30':
     resolution: {integrity: sha512-7NQmHra/JILCd1QqpSzl8+mJRc8ZHz3uDm8YV1Ks9IhK0epEiTw8aIErbvH9PI+6XbqhyIQy3462nEsn7UVzjQ==}
+
+  '@types/swagger-ui-express@4.1.8':
+    resolution: {integrity: sha512-AhZV8/EIreHFmBV5wAs0gzJUNq9JbbSXgJLQubCC0jtIo6prnI9MIRRxnU4MZX9RB9yXxF1V4R7jtLl/Wcj31g==}
 
   '@types/uuid@9.0.8':
     resolution: {integrity: sha512-jg+97EGIcY9AGHJJRaaPVgetKDsrTgbRjQ5Msgjh/DQKEFl0DtyRr/VCOyD1T2R1MNeWPK/u7JoGhlDZnKBAfA==}
@@ -2100,6 +2112,15 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
+  swagger-ui-dist@5.33.1:
+    resolution: {integrity: sha512-H872wWkA53bFIsGgi7OWgmq+CRWw3nFQGdJWRqOB9wNwTm6e5ol34+qPDkV4AJlK+gglM2EsJiOOzsGsEGbluA==}
+
+  swagger-ui-express@5.0.1:
+    resolution: {integrity: sha512-SrNU3RiBGTLLmFU8GIJdOdanJTl4TOmT27tt3bWWHppqYmAZ6IDuEuBvMU6nZq0zLEe6b/1rACXCgLZqO6ZfrA==}
+    engines: {node: '>= v0.10.32'}
+    peerDependencies:
+      express: '>=4.0.0 || >=5.0.0-beta'
+
   tailwindcss@3.4.19:
     resolution: {integrity: sha512-3ofp+LL8E+pK/JuPLPggVAIaEuhvIz4qNcf3nA1Xn2o/7fb7s/TYpHhwGDv1ZU3PkBluUVaF8PyCHcm48cKLWQ==}
     engines: {node: '>=14.0.0'}
@@ -2633,6 +2654,8 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.64.2':
     optional: true
 
+  '@scarf/scarf@1.4.0': {}
+
   '@tsconfig/node10@1.0.13': {}
 
   '@tsconfig/node12@1.0.11': {}
@@ -2775,6 +2798,11 @@ snapshots:
   '@types/strip-bom@3.0.0': {}
 
   '@types/strip-json-comments@0.0.30': {}
+
+  '@types/swagger-ui-express@4.1.8':
+    dependencies:
+      '@types/express': 4.17.25
+      '@types/serve-static': 1.15.10
 
   '@types/uuid@9.0.8': {}
 
@@ -3898,6 +3926,15 @@ snapshots:
       ts-interface-checker: 0.1.13
 
   supports-preserve-symlinks-flag@1.0.0: {}
+
+  swagger-ui-dist@5.33.1:
+    dependencies:
+      '@scarf/scarf': 1.4.0
+
+  swagger-ui-express@5.0.1(express@4.22.3):
+    dependencies:
+      express: 4.22.3
+      swagger-ui-dist: 5.33.1
 
   tailwindcss@3.4.19:
     dependencies:

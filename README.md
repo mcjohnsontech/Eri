@@ -12,7 +12,7 @@ A policy-driven engine that investigates simulated Nigerian instant-transfer fai
 ![Redis](https://img.shields.io/badge/Redis-BullMQ-DC382D?logo=redis&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-Compose-2496ED?logo=docker&logoColor=white)
 
-**[Quick start](#quick-start) · [Architecture](#architecture--services) · [API](#rest-api-reference) · [Testing](#build--test)**
+**[Quick start](#quick-start) · [Swagger UI](#swagger-ui) · [Architecture](#architecture--services) · [API](#rest-api-reference) · [Testing](#build--test)**
 
 </div>
 
@@ -55,10 +55,48 @@ Then open **[http://localhost:5173](http://localhost:5173)** to inspect the dash
 
 For a guided first run, see [Windows setup](#windows-setup), [Seed mock banking data](#seed-mock-banking-data), and [Verify the core workflow](#verify-the-core-workflow).
 
+## Swagger UI
+
+After the gateway is running, open:
+
+**[http://localhost:3000/docs](http://localhost:3000/docs)**
+
+Swagger UI lets you:
+
+1. Expand an endpoint to view its request and response contract.
+2. Click **Try it out**.
+3. Enter request values.
+4. Click **Execute** and inspect the response.
+
+The raw OpenAPI document is available at:
+
+```text
+http://localhost:3000/openapi.json
+```
+
+### Testing signed disputes in Swagger
+
+`POST /v1/disputes` is protected by HMAC authentication. Swagger can send the
+request, but you must provide valid values for:
+
+- `x-eri-timestamp`: current Unix timestamp in seconds;
+- `x-eri-signature`: HMAC-SHA256 of
+  `<timestamp>.<exact JSON request body>`, using `WEBHOOK_HMAC_SECRET`.
+
+For ordinary endpoint testing, start with **health**, **metrics**, **policies**,
+**batches**, and the case inspection endpoints. For dispute ingestion, generate
+the signature with the PowerShell example in
+[Submit a dispute](#submit-a-dispute),
+then paste the two header values into Swagger's request headers.
+
+Swagger is exposed only by the gateway and does not bypass authentication or
+change the deterministic safety rules.
+
 ## Table of contents
 
 - [Overview](#overview)
 - [Quick start](#quick-start)
+- [Swagger UI](#swagger-ui)
 - [Architecture & services](#architecture--services)
 - [Prerequisites](#prerequisites)
 - [Windows setup](#windows-setup)
@@ -639,5 +677,6 @@ shared or production database.
 
 Hackathon build. Not for production use.
 #
+# Eri
 #   E r i  
  

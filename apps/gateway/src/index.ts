@@ -2,6 +2,7 @@ import express, { Request, Response } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
+import swaggerUi from 'swagger-ui-express';
 import 'express-async-errors';
 
 import { verifyWebhookSignature } from './middleware/webhook-auth';
@@ -15,11 +16,150 @@ import { db } from './db/client';
 
 const app = express();
 
+const openApiDocument = {
+  openapi: '3.0.3',
+  info: {
+    title: 'Eri API',
+    version: '0.1.0',
+    description: 'Evidence-first transaction monitoring and dispute resolution API. Simulation only.',
+  },
+  servers: [{ url: 'http://localhost:3000', description: 'Local gateway' }],
+  tags: [
+    { name: 'System', description: 'Health, policies, metrics, and activity' },
+    { name: 'Disputes', description: 'Signed dispute ingestion' },
+    { name: 'Cases', description: 'Case inspection and review' },
+    { name: 'Batches', description: 'Batch transaction ingestion' },
+    { name: 'Audit', description: 'Audit and compliance views' },
+  ],
+  paths: {
+    '/v1/health': {
+      get: {
+        tags: ['System'],
+        summary: 'Check gateway and database health',
+        responses: { '200': { description: 'Healthy' }, '503': { description: 'Database unavailable' } },
+      },
+    },
+    '/v1/disputes': {
+      post: {
+        tags: ['Disputes'],
+        summary: 'Submit a signed dispute',
+        description: 'Requires x-eri-timestamp and x-eri-signature HMAC headers.',
+        parameters: [{ $ref: '#/components/parameters/EriTimestamp' }, { $ref: '#/components/parameters/EriSignature' }],
+        requestBody: { required: true, content: { 'application/json': { schema: { $ref: '#/components/schemas/Dispute' } } } },
+        responses: {
+          '202': { description: 'Accepted', content: { 'application/json': { schema: { $ref: '#/components/schemas/AcceptedCase' } } } },
+          '400': { $ref: '#/components/responses/BadRequest' },
+          '401': { description: 'Missing or invalid HMAC signature' },
+        },
+      },
+    },
+    '/v1/cases/{case_id}': {
+      get: {
+        tags: ['Cases'], summary: 'Get a case', parameters: [{ $ref: '#/components/parameters/CaseId' }],
+        responses: { '200': { description: 'Case record', content: { 'application/json': { schema: { $ref: '#/components/schemas/Case' } } } }, '404': { $ref: '#/components/responses/NotFound' } },
+      },
+    },
+    '/v1/cases/{case_id}/evidence': {
+      get: {
+        tags: ['Cases'], summary: 'Get evidence and reconstructed timeline', parameters: [{ $ref: '#/components/parameters/CaseId' }],
+        responses: { '200': { description: 'Evidence bundle and timeline' } },
+      },
+    },
+    '/v1/cases/{case_id}/audit': {
+      get: {
+        tags: ['Audit'], summary: 'Get and verify a case audit trail', parameters: [{ $ref: '#/components/parameters/CaseId' }],
+        responses: { '200': { description: 'Audit entries and chain verification' } },
+      },
+    },
+    '/v1/cases/{case_id}/clocks': {
+      get: {
+        tags: ['Cases'], summary: 'Get SLA clocks for a case', parameters: [{ $ref: '#/components/parameters/CaseId' }],
+        responses: { '200': { description: 'SLA clocks' } },
+      },
+    },
+    '/v1/cases/{case_id}/review': {
+      post: {
+        tags: ['Cases'], summary: 'Submit a human review decision', parameters: [{ $ref: '#/components/parameters/CaseId' }],
+        requestBody: { required: true, content: { 'application/json': { schema: { $ref: '#/components/schemas/Review' } } } },
+        responses: { '200': { description: 'Review recorded' }, '400': { $ref: '#/components/responses/BadRequest' }, '404': { $ref: '#/components/responses/NotFound' } },
+      },
+    },
+    '/v1/review-queue': {
+      get: { tags: ['Cases'], summary: 'List cases awaiting human review', responses: { '200': { description: 'Pending review cases' } } },
+    },
+    '/v1/batches': {
+      post: {
+        tags: ['Batches'], summary: 'Create cases for transaction references',
+        requestBody: { required: true, content: { 'application/json': { schema: { $ref: '#/components/schemas/Batch' } } } },
+        responses: { '202': { description: 'Batch accepted' }, '400': { $ref: '#/components/responses/BadRequest' } },
+      },
+    },
+    '/v1/metrics/summary': {
+      get: { tags: ['System'], summary: 'Get operational metrics', responses: { '200': { description: 'Metrics summary' } } },
+    },
+    '/v1/policies/active': {
+      get: { tags: ['System'], summary: 'Get active policy YAML', responses: { '200': { description: 'Active policy' } } },
+    },
+    '/v1/audit/findings': {
+      get: { tags: ['Audit'], summary: 'List audit findings', responses: { '200': { description: 'Audit findings' } } },
+    },
+    '/v1/audit/breaches': {
+      get: { tags: ['Audit'], summary: 'List SLA breaches', responses: { '200': { description: 'SLA breaches' } } },
+    },
+    '/v1/audit/counterparties': {
+      get: { tags: ['Audit'], summary: 'List counterparty scorecards', responses: { '200': { description: 'Counterparty scorecards' } } },
+    },
+    '/v1/activity': {
+      get: { tags: ['System'], summary: 'Stream recent audit activity', responses: { '200': { description: 'Server-sent events stream', content: { 'text/event-stream': {} } } } },
+    },
+  },
+  components: {
+    parameters: {
+      CaseId: { name: 'case_id', in: 'path', required: true, schema: { type: 'string', format: 'uuid' } },
+      EriTimestamp: { name: 'x-eri-timestamp', in: 'header', required: true, schema: { type: 'string' } },
+      EriSignature: { name: 'x-eri-signature', in: 'header', required: true, schema: { type: 'string', description: 'HMAC-SHA256(timestamp + "." + exact JSON body)' } },
+    },
+    schemas: {
+      Dispute: {
+        type: 'object',
+        required: ['external_id', 'amount', 'currency', 'reason', 'customer_id'],
+        properties: {
+          external_id: { type: 'string', example: 'TX1004' },
+          amount: { type: 'number', minimum: 0, example: 50 },
+          currency: { type: 'string', minLength: 3, maxLength: 3, example: 'USD' },
+          reason: { type: 'string', example: 'Debit posted but beneficiary was not credited.' },
+          customer_id: { type: 'string', example: 'SMOKE-CUSTOMER' },
+        },
+      },
+      Batch: { type: 'object', required: ['refs'], properties: { refs: { type: 'array', minItems: 1, items: { type: 'string' }, example: ['TX1001', 'TX1004'] } } },
+      Review: {
+        type: 'object',
+        required: ['decision', 'reason', 'reviewer_id'],
+        properties: {
+          decision: { type: 'string', enum: ['APPROVED', 'REJECTED'] },
+          reason: { type: 'string', minLength: 1 },
+          reviewer_id: { type: 'string', minLength: 1 },
+        },
+      },
+      AcceptedCase: { type: 'object', properties: { case_id: { type: 'string', format: 'uuid' }, status: { type: 'string', example: 'RECEIVED' } } },
+      Case: { type: 'object', additionalProperties: true, properties: { id: { type: 'string' }, status: { type: 'string' }, derived_state: { type: 'string' }, transaction_ref: { type: 'string' } } },
+    },
+    responses: {
+      BadRequest: { description: 'Invalid request' },
+      NotFound: { description: 'Resource not found' },
+    },
+  },
+} as const;
+
 // Middleware
 app.use(helmet());
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(openApiDocument, {
+  customSiteTitle: 'Eri API Swagger',
+}));
+app.get('/openapi.json', (req: Request, res: Response) => res.json(openApiDocument));
 
 // Routes
 // Dispute routes with webhook auth
