@@ -1,0 +1,14 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile.dev
+    command: pnpm --filter @eri/web dev --host 0.0.0.0
+    volumes:
+      - ./apps/web:/app/apps/web
+      - /app/node_modules
+      - /app/apps/web/node_modules
+    environment:
+      VITE_API_URL: http://localhost:3000
+    ports:
+      - "5173:5173"

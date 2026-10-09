@@ -34,14 +34,14 @@ export function Landing() {
             <p className="mt-8 text-xs text-[var(--eri-muted)]">Built for bank operations teams. Designed to sit on top of existing infrastructure.</p>
           </div>
           <div className="relative">
-            <div className="panel overflow-hidden bg-[var(--eri-deep)] text-[var(--eri-paper)]">
-              <div className="flex items-center justify-between border-b border-white/10 px-[18px] py-4"><span className="eyebrow !text-[var(--eri-indigo-200)]">Live reconstruction</span><span className="mono text-[11px] text-[var(--eri-moss-on-dark)]">CASE 8F2A · 2.9s</span></div>
+            <div className="overflow-hidden rounded-[6px] border border-[#2e3c77] bg-[#141829] text-[#faf9f7]">
+              <div className="flex items-center justify-between border-b border-[#3f4f92] px-[18px] py-4"><span className="eyebrow !text-[#aeb8e0]">Live reconstruction</span><span className="mono text-[11px] text-[#9fba96]">CASE 8F2A · 2.9s</span></div>
               <div className="space-y-6 p-6">
-                <div><div className="text-xs text-[var(--eri-indigo-200)]">TRANSACTION STATE</div><div className="display mt-2 text-3xl">Failed, not reversed</div></div>
+                <div><div className="text-xs font-semibold tracking-[.12em] text-[#aeb8e0]">TRANSACTION STATE</div><div className="display mt-2 text-3xl text-[#faf9f7]">Failed, not reversed</div></div>
                 <div className="space-y-3">
-                  {['Core banking · debit successful', 'Switch · message submitted', 'Beneficiary · no acknowledgement', 'Settlement · unconfirmed'].map((item, i) => <div key={item} className={`flex items-center justify-between border-l-2 py-2 pl-3 text-sm ${i > 1 ? 'border-[var(--eri-clay-on-dark)] text-[var(--eri-clay-on-dark)]' : 'border-[var(--eri-moss-on-dark)]'}`}><span>{item}</span><span className="mono text-[11px] text-white/45">{i < 2 ? `14:22:0${6 + i}` : ''}</span></div>)}
+                  {['Core banking · debit successful', 'Switch · message submitted', 'Beneficiary · no acknowledgement', 'Settlement · unconfirmed'].map((item, i) => <div key={item} className={`flex items-center justify-between border-l-2 py-2 pl-3 text-sm ${i > 1 ? 'border-[#d9937f] text-[#d9937f]' : 'border-[#9fba96] text-[#faf9f7]'}`}><span>{item}</span><span className="mono text-[11px] text-[#d8d8d3]">{i < 2 ? `14:22:0${6 + i}` : ''}</span></div>)}
                 </div>
-                <div className="border-t border-white/15 pt-5"><div className="eyebrow !text-[var(--eri-indigo-200)]">Finding</div><p className="display mt-2 text-xl leading-8">The beneficiary institution never acknowledged the credit.</p></div>
+                <div className="border-t border-[#3f4f92] pt-5"><div className="eyebrow !text-[#aeb8e0]">Finding</div><p className="display mt-2 text-xl leading-8 text-[#faf9f7]">The beneficiary institution never acknowledged the credit.</p></div>
               </div>
             </div>
             <div className="absolute -bottom-5 -left-5 hidden border border-[var(--eri-border)] bg-[var(--eri-surface)] px-4 py-3 text-xs text-[var(--eri-muted)] sm:block"><span className="mono text-[var(--eri-moss)]">✓</span> Evidence chain verified</div>

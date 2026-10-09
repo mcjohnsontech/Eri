@@ -53,6 +53,19 @@ Invoke-RestMethod http://localhost:3000/v1/health
 
 Then open **[http://localhost:5173](http://localhost:5173)** to inspect the dashboard. Update local secrets in `.env` before running and **never commit `.env`**. AI is disabled by default.
 
+### Fast frontend development
+
+For dashboard and landing-page changes, do not rebuild the production image.
+Run the Vite development override instead; source files are mounted and changes
+appear through hot reload:
+
+```powershell
+docker compose -f docker-compose.yml -f docker-compose.dev.yml up -d web
+```
+
+Use the normal `docker compose up -d --build` command only when validating the
+production image or preparing a deployment.
+
 For a guided first run, see [Windows setup](#windows-setup), [Seed mock banking data](#seed-mock-banking-data), and [Verify the core workflow](#verify-the-core-workflow).
 
 ## Swagger UI
