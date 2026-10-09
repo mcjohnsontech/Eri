@@ -1,10 +1,11 @@
 import React from 'react';
-import { Activity, ArrowUpRight, FileText, LayoutDashboard, ListTodo } from 'lucide-react';
+import { Activity, ArrowUpRight, FileText, GitBranch, LayoutDashboard, ListTodo } from 'lucide-react';
 import { NavLink, Link } from 'react-router-dom';
 
 const navItems = [
   { to: '/dashboard', label: 'Overview', icon: LayoutDashboard },
   { to: '/review-queue', label: 'Review queue', icon: ListTodo },
+  { to: '/automation-flow', label: 'Automation Flow', icon: GitBranch },
   { to: '/policies', label: 'Policies', icon: FileText },
 ];
 

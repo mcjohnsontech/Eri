@@ -59,5 +59,18 @@ export const EriClient = {
     const res = await fetch(apiUrl('/v1/policies/active'));
     if (!res.ok) throw new Error('Failed to fetch policies');
     return res.json();
+  },
+  getActivity(onMessage: (events: any[]) => void, onError?: () => void) {
+    const source = new EventSource(apiUrl('/v1/activity'));
+    source.onmessage = (event) => {
+      try {
+        const parsed = JSON.parse(event.data);
+        if (Array.isArray(parsed)) onMessage(parsed);
+      } catch {
+        onError?.();
+      }
+    };
+    source.onerror = () => onError?.();
+    return () => source.close();
   }
 };
